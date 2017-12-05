@@ -2,10 +2,17 @@ var path = require('path')
 var webpack = require('webpack')
 var utils = require('./utils')
 module.exports = {
-  entry: utils.entries(),
+  entry: {
+    vendor: ['vue'],
+    ...utils.entries()
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js'
+    publicPath: "/", // server-relative
+    hashDigestLength: 6,
+    //导出文件
+    filename: 'javascripts/[name]_[chunkhash].js',
+    chunkFilename: 'javascripts/[id]_[chunkhash].js'
   },
   module: {
     rules: [
@@ -70,7 +77,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.join(__dirname, './src')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
@@ -88,7 +96,7 @@ module.exports = {
 module.exports.plugins = utils.htmlPlugin()
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  module.exports.devtool = 'none'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
@@ -104,6 +112,9 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+  })
   ])
 }
