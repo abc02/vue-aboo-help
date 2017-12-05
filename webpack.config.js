@@ -69,10 +69,15 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
+        use:  {
+          loader: 'url-loader',
+          options: {
+              limit: 10000,
+              fallback: 'file-loader',
+              name: '[name].[ext]?[hash:6]',
+              outputPath: 'assets/',
+          }
+      }
       }
     ]
   },
