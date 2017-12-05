@@ -11,8 +11,9 @@ module.exports = {
     publicPath: "/", // server-relative
     hashDigestLength: 6,
     //导出文件
-    filename: 'javascripts/[name]_[chunkhash].js',
-    chunkFilename: 'javascripts/[id]_[chunkhash].js'
+    filename: process.env.NODE_ENV === 'production'
+    ? 'javascripts/[name]_[chunkhash].js'
+    : '[name].js'
   },
   module: {
     rules: [
