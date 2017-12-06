@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>APP使用</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+    .swiper-container {
+      width: 216px !important;
+      height: 384px !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,7 +28,7 @@
         <span class="ml20 text sm weak">{{text}}</span>
       </li>
       <li class="row-center" v-if="fixing.swiper && fixing.swiper.length > 0">
-        <mt-swipe :auto="0" class="prod">
+        <mt-swipe :auto="0" class="swiper-container">
           <mt-swipe-item v-for="(item, key) in fixing.swiper" :key="key">
             <img :src=item :alt=item />
           </mt-swipe-item>

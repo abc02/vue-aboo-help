@@ -2,7 +2,6 @@ import Vue from 'vue'
 import { Swipe, SwipeItem } from 'mint-ui'
 import '@/styles/reset.scss'
 import '@/styles/base.scss'
-import './fixing.scss'
 
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)

@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>鞋垫介绍</title>
-  <style>
+  <style type="text/css">
     [v-cloak] {
       display: none;
+    }
+    .swiper-container {
+      width: 120px !important;
+      height: 65px !important;
     }
   </style>
 </head>
@@ -20,11 +24,11 @@
       <li>
         <h4 class="text sm">{{fixing.title}}</h4>
       </li>
-      <li v-for="text in fixing.text" v-if="fixing.text.length > 0">
-       <span class="ml20 text sm weak">{{text}}</span>
+      <li v-for="text in fixing.text" v-if="fixing.text && fixing.text.length > 0">
+        <span class="ml20 text sm weak">{{text}}</span>
       </li>
       <li class="row-center" v-if="fixing.swiper && fixing.swiper.length > 0">
-        <mt-swipe :auto="0" class="prod">
+        <mt-swipe :auto="0" class="swiper-container">
           <mt-swipe-item v-for="(item, key) in fixing.swiper" :key="key">
             <img :src=item :alt=item />
           </mt-swipe-item>
