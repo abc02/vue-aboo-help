@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import { Swipe, SwipeItem } from 'mint-ui'
+import '@/styles/reset.scss'
+import '@/styles/base.scss'
 import './use.scss'
 
 Vue.component(Swipe.name, Swipe)
@@ -11,8 +13,13 @@ import help03 from './assets/help-03.png'
 new Vue({
   el: '#app',
   data: {
-    lists: [
-      help01, help02, help03
+    title: 'APP介绍',
+    content: [
+      {
+        title: 'APP使用教程',
+        swiper: [help01, help02, help03]
+      }
     ]
+
   }
 })

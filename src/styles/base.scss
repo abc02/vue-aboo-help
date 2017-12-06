@@ -1,0 +1,95 @@
+@import "variable";
+//******外边距原子样式******/
+.mr10{margin-right: 10px}
+.mr20{margin-right: 20px}
+.ml10{margin-left: 10px}
+.ml20{margin-left: 20px}
+.mt10{margin-top: 10px}
+.mt20{margin-top: 20px}
+.mb10{margin-bottom: 10px}
+.mb20{margin-bottom: 20px}
+
+.pr10{padding-right: 10px}
+.pl10{padding-left: 10px}
+.pt10{padding-top: 10px}
+.pb10{padding-bottom: 10px}
+
+//******通用样式******/
+.text{
+  height: 1.6rem;
+  line-height: 1.6rem;
+}
+.white{color:#FFF}
+.muted,input.muted{color: $color-muted}
+.weak{color: $color-weak}
+.primary{color: $color-primary}
+.major{color: $color-major}
+.danger{color: $color-danger}
+
+.xl{font-size: $text-xl}
+.xxl{font-size: $text-xxl}
+.lg{font-size: $text-lg}
+.sm{font-size: $text-sm}
+.xs{font-size: $text-xs}
+
+.inline{
+  text-overflow: ellipsis;
+  word-break:keep-all;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+view.bg-white{background-color: white}
+
+
+//******布局样式******/
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .row-center{
+    @extend .row;
+    justify-content: center;
+  }
+  .row-between {
+    @extend .row;
+    justify-content: space-between;
+  }
+  .row-around {
+    @extend .row;
+    justify-content: space-around;
+  }
+  .row-end {
+    @extend .row;
+    justify-content: flex-end;
+  }
+  .column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .column-center{
+    @extend .column;
+    align-items: center;
+  }
+  .column-stretch{
+    @extend .column;
+    align-items: stretch;
+  }
+  .column-around{
+    @extend .column;
+    justify-content: space-around;
+  }
+  .column-between{
+    @extend .column;
+    justify-content: space-between;
+  }
+  .container{
+    @extend  .column;
+  }
+  .fixed-bottom{
+    position: fixed;
+    bottom: 0;
+  }
+  
