@@ -10,9 +10,14 @@
       <div id="app">
         <mt-cell v-for="item in nav" key="index" :title="item.text" :to="item.url" is-link></mt-cell>
 
-        <mt-cell v-for="item in contact" key="index" :icon="item.icon" :title="item.text" :to="item.url" :label="item.label">
-          <img slot="icon" :src="item.icon" width="24" height="24">
+
+        <div class="contact-container">
+          <mt-cell  class="contact mt10" v-for="item in contact" key="index" :icon="item.icon" :title="item.text" :to="item.url" :label="item.label">
+            <div class="img-icon">
+                <img slot="icon" :src="item.icon" width="24" height="24">
+            </div>
         </mt-cell>
+      </div>
       </div>
 </body>
 </html>

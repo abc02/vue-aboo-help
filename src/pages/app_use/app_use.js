@@ -62,11 +62,12 @@ new Vue({
         title: '获取位置',
         text:[
           '设备会根据用户设置的模式（省电模式：1小时，非省电模式：3分钟）进行自动上传位置信息。用户也可点击更新位置按钮，获取设备当前所在位置信息。'
-        ]
+        ],
+        swiper: [image09, image10]
       },
       {
         title: '设备状态',
-        swiper: [image09, image10, image11, image12, image13, image14]
+        swiper: [image11, image12, image13, image14]
       },
       {
         title: '设置安全守护',

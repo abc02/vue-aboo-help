@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import { Cell } from 'mint-ui'
+
 Vue.component(Cell.name, Cell)
+import '@/styles/base.scss'
+import './index.scss'
 
 import logo from './assets/logo.png'
 import phone from './assets/phone.png'
@@ -35,8 +38,8 @@ new Vue({
       {
         icon: logo,
         text: '阿布跑跑官方网站',
-        label: 'http://0577xiedu.net',
-        url: 'http://0577xiedu.net'
+        label: 'http://abupaopao.0577xiedu.net',
+        url: 'http://abupaopao.0577xiedu.net'
       }
     ]
   }
