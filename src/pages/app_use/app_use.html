@@ -27,8 +27,8 @@
       <li v-for="text in fixing.text" v-if="fixing.text.length > 0">
         <span class="ml20 text sm weak">{{text}}</span>
       </li>
-      <li class="row-center" v-if="fixing.swiper && fixing.swiper.length > 0">
-        <mt-swipe :auto="0" class="swiper-container">
+      <li class="row-center mt10 mb10" v-if="fixing.swiper && fixing.swiper.length > 0">
+        <mt-swipe :auto="0" :continuous="false" class="swiper-container">
           <mt-swipe-item v-for="(item, key) in fixing.swiper" :key="key">
             <img :src=item :alt=item />
           </mt-swipe-item>
