@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import '@/styles/reset.scss'
 import '@/styles/base.scss'
-
+import Back from '@/components/Back'
 new Vue({
   el: '#app',
+  components: {
+    Back
+  },
   data: {
     title: '设备无法联网处理方法',
     content: [

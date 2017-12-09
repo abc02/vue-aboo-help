@@ -3,11 +3,15 @@ import { Swipe, SwipeItem } from 'mint-ui'
 import '@/styles/reset.scss'
 import '@/styles/base.scss'
 
+import Back from '@/components/Back'
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 
 new Vue({
   el: '#app',
+  components: {
+    Back
+  },
   data: {
     title: '常见问题',
     content: [

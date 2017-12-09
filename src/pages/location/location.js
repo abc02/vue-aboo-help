@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import '@/styles/reset.scss'
 import '@/styles/base.scss'
-
+import Back from '@/components/Back'
 new Vue({
   el: '#app',
+  components: {
+    Back
+  },
   data: {
     title: '定位失败原因',
     content: [
