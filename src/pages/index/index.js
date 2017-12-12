@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { Cell } from 'mint-ui'
 
 Vue.component(Cell.name, Cell)
+import '@/styles/reset.scss'
 import '@/styles/base.scss'
 import './index.scss'
 
