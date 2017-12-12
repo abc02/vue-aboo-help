@@ -74,7 +74,7 @@ module.exports = {
           options: {
               limit: 10000,
               fallback: 'file-loader',
-              name: '[name].[ext]?[hash:6]',
+              name: '[name]_[hash:6].[ext]',
               outputPath: 'assets/',
           }
       }
