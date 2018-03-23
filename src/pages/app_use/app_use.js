@@ -65,7 +65,7 @@ new Vue({
       {
         title: '添加新成员',
         text:[
-          '新用户扫描二维码时，并正确输入设备密码“默认密码0000”管理员就会收到请求绑定通知，管理员进入指定设备的绑定列表界面，可进行同意/拒绝操作，当管理员同意/拒绝新用户即可收到通知。'
+          '新用户扫描二维码时，并正确输入鞋垫密码“默认密码0000”管理员就会收到请求绑定通知，管理员进入指定鞋垫的绑定列表界面，可进行同意/拒绝操作，当管理员同意/拒绝新用户即可收到通知。'
         ],
         iosSwiper: [ios01, ios02, ios03, ios04 ],
         androidSwiper: [android01, android02, android03, android04 ]
@@ -73,7 +73,7 @@ new Vue({
       {
         title: '更改管理员',
         text:[
-          '如需更改设备管理员，在绑定列表界面选择一位用户，向左滑动点击“转让”按钮，当新管理员收到通知时，说明管理员权限转让成功。'
+          '如需更改鞋垫管理员，在绑定列表界面选择一位用户，向左滑动点击“转让”按钮，当新管理员收到通知时，说明管理员权限转让成功。'
         ],
         iosSwiper: [ios05, ios06, ios07],
         androidSwiper: [android05, android06, android07]
@@ -87,20 +87,20 @@ new Vue({
         androidSwiper: [android05, android06, android08]
       },
       {
-        title: '设备密码修改（仅管理员有修改权限）',
+        title: '鞋垫密码修改（仅管理员有修改权限）',
         iosSwiper: [ios15, ios16],
         androidSwiper: [android15, android16]
       },
       {
         title: '获取位置',
         text:[
-          '设备会根据用户设置的模式（省电模式：1小时，非省电模式：3分钟）进行自动上传位置信息。用户也可点击更新位置按钮，获取设备当前所在位置信息。'
+          '鞋垫会根据用户设置的模式（省电模式：1小时，非省电模式：3分钟）进行自动上传位置信息。用户也可点击更新位置按钮，获取鞋垫当前所在位置信息。'
         ],
         iosSwiper: [ios09, ios10, ios11, ios12,],
         androidSwiper: [android09, android10, android11, android12,]
       },
       {
-        title: '设备状态',
+        title: '鞋垫状态',
         iosSwiper: [ios13, ios14],
         androidSwiper: [android13, android14]
       },

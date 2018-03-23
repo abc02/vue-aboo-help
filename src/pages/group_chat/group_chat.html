@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>APP使用</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+    .swiper-container {
+      overflow: visible !important;
+      width: 216px !important;
+      height: 384px !important;
+    }
+    .swiper-container .mint-swipe-indicators{
+      bottom: -20px;
+    }
+    .swiper-container .mint-swipe-indicators .is-active{
+      opacity: .8;
+      background: #f6655e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mt20 mb20 mr20 ml20" id="app" v-cloak>
+    <h3 class="mb20">{{title}}</h3>
+    <ul v-for="fixing in content" v-if="content.length > 0">
+      <li>
+        <h4 class="text sm">{{fixing.title}}</h4>
+      </li>
+      <li v-for="text in fixing.text" v-if="fixing.text.length > 0">
+        <span class="ml20 text sm weak">{{text}}</span>
+      </li>
+      <li class="row-center mt10 mb20" v-if="isiOS && fixing.iosSwiper && fixing.iosSwiper.length > 0">
+        <mt-swipe :auto="0" :continuous="false" class="swiper-container">
+          <mt-swipe-item v-for="(item, key) in fixing.iosSwiper" :key="key">
+            <img :src=item :alt=item />
+          </mt-swipe-item>
+        </mt-swipe>
+      </li>
+      <li class="row-center mt10 mb20" v-if="isAndroid && fixing.androidSwiper && fixing.androidSwiper.length > 0">
+        <mt-swipe :auto="0" :continuous="false" class="swiper-container">
+          <mt-swipe-item v-for="(item, key) in fixing.androidSwiper" :key="key">
+            <img :src=item :alt=item />
+          </mt-swipe-item>
+        </mt-swipe>
+      </li>
+    </ul>
+    <Back />
+  </div>
+</body>
+
+</html>

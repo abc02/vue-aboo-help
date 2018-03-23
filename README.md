@@ -1,4 +1,8 @@
-# aboo-help
+# vue-aboo-help
+## 技术栈 vue
+## 扫描二维码，预览效果更佳
+
+![](./qrcode.png)
 
 > A Vue.js project
 

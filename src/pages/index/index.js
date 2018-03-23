@@ -21,11 +21,15 @@ new Vue({
         url: 'app_use.html'
       },
       {
+        text: '家庭群聊',
+        url: 'group_chat.html'
+      },
+      {
         text: '定位失败原因',
         url: 'location.html'
       },
       {
-        text: '设备无法联网',
+        text: '鞋垫无法联网',
         url: 'network.html'
       }
     ],
@@ -39,8 +43,8 @@ new Vue({
       {
         icon: logo,
         text: '阿布跑跑官方网站',
-        label: 'http://abupaopao.0577xiedu.net',
-        url: 'http://abupaopao.0577xiedu.net'
+        label: 'https://abpao.com ',
+        url: 'https://abpao.com '
       }
     ]
   }
