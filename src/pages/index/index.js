@@ -31,7 +31,11 @@ new Vue({
       {
         text: '鞋垫无法联网',
         url: 'network.html'
-      }
+      },
+      // {
+      //   text: 'APP使用指南',
+      //   url: 'help_new.html'
+      // }
     ],
     contact: [
       {
@@ -44,7 +48,7 @@ new Vue({
         icon: logo,
         text: '阿布跑跑官方网站',
         label: 'https://abpao.com ',
-        url: 'https://abpao.com '
+        url: 'javascript:void(0) '
       }
     ]
   }
